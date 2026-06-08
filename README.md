@@ -37,22 +37,17 @@ int main() {
     setlocale(LC_ALL, "Russian");
     
     PositiveTwoStacksQueue q;
-    
-    // Добавляем в очередь
+
     q.enqueue(10);
     q.enqueue(20);
     q.enqueue(30);
     
-    // Смотрим первый элемент
     std::cout << "Первый в очереди (front): " << q.front() << std::endl;
     
-    // Выполняем (удаляем) первый элемент
     std::cout << "Удаляем элемент (dequeue): " << q.dequeue() << std::endl;
     
-    // Смотрим новую вершину
     std::cout << "Следующий в очереди (front): " << q.front() << std::endl;
     
-    // Проверка вариативной части 8 (некорректное число)
     try {
         std::cout << "\nПопытка добавить некорректное число (-5):" << std::endl;
         q.enqueue(-5);
